@@ -11,6 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/MySimpleRadio' element={<Home/>}></Route>
         <Route path='/musicstreamer' element={<MusicStreamer/>}></Route>
       </Routes>
     </BrowserRouter>     
