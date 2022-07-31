@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/MySimpleRadio/static/js/main.816cb635.js",
+    "main.js": "/MySimpleRadio/static/js/main.62a0b4ee.js",
     "index.html": "/MySimpleRadio/index.html",
-    "main.816cb635.js.map": "/MySimpleRadio/static/js/main.816cb635.js.map"
+    "main.62a0b4ee.js.map": "/MySimpleRadio/static/js/main.62a0b4ee.js.map"
   },
   "entrypoints": [
-    "static/js/main.816cb635.js"
+    "static/js/main.62a0b4ee.js"
   ]
 }
