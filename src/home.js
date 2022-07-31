@@ -31,7 +31,7 @@ export default function Home(){
             <div className='w-fit h-fit p-5 pb-10 mt-60 mx-auto border-2 border-transparent hover:border-t-white hover:border-b-white hover:border-t-2 hover:border-b-2 transition duration-500 ease-in-out'>
                 <div className='flex justify-start items-center mt-5'>
                     <p className='text-7xl text-white text-center' style={{fontFamily: 'Barlow Condensed'}}>MY SIMPLE RADIO</p>
-                    <img ref={refIcon} onClick={unMute} className='w-16 h-16 ml-5 hover:scale-110 cursor-pointer' src='./image/headphone.svg' alt='HeadphoneIcon'></img>
+                    <img ref={refIcon} onClick={unMute} className='w-16 h-16 ml-5 hover:scale-110 cursor-pointer' src='image/headphone.svg' alt='HeadphoneIcon'></img>
                 </div>
                 {/* <p className='text-xl text-white text-center mt-2 mb-10' style={{fontFamily: 'Barlow Condensed'}}>AN ONLINE MUSIC APP</p> */}
                 <div className='bg-transparent mx-auto mt-12 w-fit h-fit'>
