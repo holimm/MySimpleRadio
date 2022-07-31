@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/MySimpleRadio' element={<Home/>}></Route>
-        <Route path='/musicstreamer' element={<MusicStreamer/>}></Route>
+        <Route path='/MySimpleRadio/MusicStreamer' element={<MusicStreamer/>}></Route>
       </Routes>
     </BrowserRouter>     
     </>

@@ -35,7 +35,7 @@ export default function Home(){
                 </div>
                 {/* <p className='text-xl text-white text-center mt-2 mb-10' style={{fontFamily: 'Barlow Condensed'}}>AN ONLINE MUSIC APP</p> */}
                 <div className='bg-transparent mx-auto mt-12 w-fit h-fit'>
-                    <Link to='/musicstreamer'>
+                    <Link to='/MySimpleRadio/MusicStreamer'>
                     <button className='px-20 py-5 text-lg bg-transparent border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out text-white rounded-full'>START LISTENING</button>
                     </Link>
                 </div>

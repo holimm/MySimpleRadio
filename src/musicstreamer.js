@@ -9,9 +9,9 @@ export default function MusicStreamer(){
     const refPause = useRef(null);
     const [mute,setMute] = useState(true);
     const [play,setPlay] = useState(false);
-    const [playIcon, setPlayIcon] = useState('./image/icon/play.svg');
+    const [playIcon, setPlayIcon] = useState('../image/icon/play.svg');
     const [volume,setVolume] = useState(0);
-    const [volumeIcon, setVolumeIcon] = useState('./image/icon/volumeoff.svg');
+    const [volumeIcon, setVolumeIcon] = useState('../image/icon/volumeoff.svg');
     const [volumeRain,setVolumeRain] = useState(0);
     const [volumeWave,setVolumeWave] = useState(0);
     const [brightness,setBrightness] = useState(0);
@@ -27,17 +27,17 @@ export default function MusicStreamer(){
     
     const changeMute = () => {
         if(mute){
-            setMute(false); setVolumeIcon('./image/icon/volumeon.svg');
+            setMute(false); setVolumeIcon('../image/icon/volumeon.svg');
         }else{
-            setMute(true); setVolumeIcon('./image/icon/volumeoff.svg'); refVolumeRange.current.value = 0; setVolume(0);
+            setMute(true); setVolumeIcon('../image/icon/volumeoff.svg'); refVolumeRange.current.value = 0; setVolume(0);
         }
     }
     const playMusic = () => {
         if(play){
-            setPlay(false); setPlayIcon('./image/icon/play.svg');
+            setPlay(false); setPlayIcon('../image/icon/play.svg');
             refStopScreen.current.style.display = 'block'; refPause.current.style.display = 'block';
         }else{
-            setPlay(true); setPlayIcon('./image/icon/pause.svg');
+            setPlay(true); setPlayIcon('../image/icon/pause.svg');
             refStopScreen.current.style.display = 'none';  refPause.current.style.display = 'none';
         }
     }
@@ -175,13 +175,13 @@ export default function MusicStreamer(){
             <div className='h-20 w-full flex justify-start items-center'>
                 <div className='w-1/3 h-full flex justify-start items-center'>
                     <Link to='/'>
-                        <button className='h-9 w-9 mx-5 ml-20 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='./image/icon/back.svg' alt='ReturnIcon'/></button> 
+                        <button className='h-9 w-9 mx-5 ml-20 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='../image/icon/back.svg' alt='ReturnIcon'/></button> 
                     </Link>
                     <h2 className='text-white text-3xl' style={{fontFamily: 'Barlow Condensed'}}>My Simple Radio</h2>
                 </div>
                 <div className='w-7/12 h-full flex justify-start items-center'>
                     <p className='text-white text-6xl truncate' style={{fontFamily: 'Barlow Condensed'}}>{channel.channel}</p>
-                    <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='./image/icon/youtube.svg' alt='YoutubeIcon'></img></a>
+                    <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='../image/icon/youtube.svg' alt='YoutubeIcon'></img></a>
                 </div>
             </div>
             <div className='w-full' style={{height: '70%'}}>
@@ -191,7 +191,7 @@ export default function MusicStreamer(){
                             return (
                             <div onClick={()=>changeChannel(items)} className='my-4 cursor-pointer' style={{fontFamily: 'Barlow Condensed'}}>
                                 <div className='flex justify-start items-center ml-12 mr-8 hover:scale-110 transition ease-in-out'>
-                                    <img className='h-4 w-4' src='./image/icon/play.svg' alt='ReturnIcon'/>
+                                    <img className='h-4 w-4' src='../image/icon/play.svg' alt='ReturnIcon'/>
                                     <p className='text-xl ml-5 text-white truncate'>{items.channel}</p>
                                 </div>
                             </div>);
@@ -200,14 +200,14 @@ export default function MusicStreamer(){
                 </div>
                 <div className='w-6/12 h-full float-left'>
                     <div ref={refPause} className='w-fit h-fit mx-auto mt-32'>
-                        <div className='w-52 h-52 bg-cover bg-center rounded-3xl' style={{backgroundImage: `url('./image/icon/pauseGIF.gif')`}}></div>
+                        <div className='w-52 h-52 bg-cover bg-center rounded-3xl' style={{backgroundImage: `url('../image/icon/pauseGIF.gif')`}}></div>
                         <p className='text-4xl text-white text-center mt-5' style={{fontFamily: 'Barlow Condensed'}}>Paused</p>
                     </div>
                 </div>
                 <div className='w-3/12 h-full float-left'>
                     <div className='w-full h-full flex justify-end items-center'>
                         <div className='w-fit h-fit absolute right-10 top-96'>
-                            <img className='w-8 h-8' src='./image/icon/brightness.svg' alt='BrightnessIcon'></img>
+                            <img className='w-8 h-8' src='../image/icon/brightness.svg' alt='BrightnessIcon'></img>
                         </div>
                         <div className='w-10 mr-20 mb-20'>
                             <input ref={refVolumeRange} type={'range'} onChange={handleBrightness} className='appearance-none rounded-xl p-0 h-1 bg-slate-100 -rotate-90' min={0} max={100} defaultValue={0}/>
@@ -220,11 +220,11 @@ export default function MusicStreamer(){
                     <div className='flex justify-center items-center w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'>
                         <div className='mx-auto w-fit'>
                             <div className='w-fit float-left mr-10'>
-                                <img className='w-8 h-8 mx-auto' src='./image/icon/rain.svg' alt='RainIcon'></img>
+                                <img className='w-8 h-8 mx-auto' src='../image/icon/rain.svg' alt='RainIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleRainVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
                             <div className='w-fit float-left ml-5'>
-                            <img className='w-8 h-8 mx-auto' src='./image/icon/wave.svg' alt='WaveIcon'></img>
+                            <img className='w-8 h-8 mx-auto' src='../image/icon/wave.svg' alt='WaveIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleWaveVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
                         </div>
