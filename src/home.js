@@ -1,24 +1,18 @@
 import { useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
-import {Link,BrowserRouter,Routes, Route} from 'react-router-dom';
-import Particle2 from './particles2';
+import {Link} from 'react-router-dom';
+import Particle2 from './particles/particles2';
 
 export default function Home(){
     const refIcon = useRef(null);
     const refVolume = useRef(null);
     const [mute,setMute] = useState(true);
-    const [volume,setVolume] = useState(0.1);
-    const [particles,setParticles] = useState(<Particle2/>);
-    const [channel,setChannel] = useState({
+    const [volume,setVolume] = useState(0.5);
+    const [particles] = useState(<Particle2/>);
+    const [channel] = useState({
         channel: 'Lofi Girl',
         url: '//www.youtube.com/embed/5_Blq9W9cT8&t?autoplay=1&mute=0&start=1',
     });
-    var listRadio = [
-        {
-            channel: 'Lofi Girl',
-            url: '//www.youtube.com/embed/5_Blq9W9cT8&t?autoplay=1&mute=0&start=1',
-        }
-    ]
     const unMute = () => {
         if(mute){
             setMute(false);refIcon.current.classList.add('animate-bounce');
@@ -37,7 +31,7 @@ export default function Home(){
             <div className='w-fit h-fit p-5 pb-10 mt-60 mx-auto border-2 border-transparent hover:border-t-white hover:border-b-white hover:border-t-2 hover:border-b-2 transition duration-500 ease-in-out'>
                 <div className='flex justify-start items-center mt-5'>
                     <p className='text-7xl text-white text-center' style={{fontFamily: 'Barlow Condensed'}}>MY SIMPLE RADIO</p>
-                    <img ref={refIcon} onClick={unMute} className='w-16 h-16 ml-5 hover:scale-110 cursor-pointer' src='./image/headphone.svg'></img>
+                    <img ref={refIcon} onClick={unMute} className='w-16 h-16 ml-5 hover:scale-110 cursor-pointer' src='./image/headphone.svg' alt='HeadphoneIcon'></img>
                 </div>
                 {/* <p className='text-xl text-white text-center mt-2 mb-10' style={{fontFamily: 'Barlow Condensed'}}>AN ONLINE MUSIC APP</p> */}
                 <div className='bg-transparent mx-auto mt-12 w-fit h-fit'>

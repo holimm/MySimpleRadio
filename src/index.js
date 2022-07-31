@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ReactPlayer from 'react-player';
-import {Link,BrowserRouter,Routes, Route} from 'react-router-dom';
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
 import Home from './home';
 import MusicStreamer from './musicstreamer';
 
