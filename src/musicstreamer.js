@@ -174,7 +174,7 @@ export default function MusicStreamer(){
         <div className='h-screen w-screen bg-transparent overflow-hidden absolute top-0'>
             <div className='h-20 w-full flex justify-start items-center'>
                 <div className='w-1/3 h-full flex justify-start items-center'>
-                    <Link to='/MySimpleRadio'>
+                    <Link to='/MySimpleRadio/'>
                         <button className='h-9 w-9 mx-5 ml-20 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/back.svg' alt='ReturnIcon'/></button> 
                     </Link>
                     <h2 className='text-white text-3xl' style={{fontFamily: 'Barlow Condensed'}}>My Simple Radio</h2>
