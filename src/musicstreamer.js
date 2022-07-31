@@ -5,7 +5,6 @@ import Particle from './particles/particles';
 
 export default function MusicStreamer(){
     const refVolumeRange = useRef(null);
-    const refGenre = useRef(null);
     const refStopScreen = useRef(null);
     const refPause = useRef(null);
     const [mute,setMute] = useState(true);
@@ -182,7 +181,7 @@ export default function MusicStreamer(){
                 </div>
                 <div className='w-7/12 h-full flex justify-start items-center'>
                     <p className='text-white text-6xl truncate' style={{fontFamily: 'Barlow Condensed'}}>{channel.channel}</p>
-                    <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='./image/icon/youtube.svg'></img></a>
+                    <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='./image/icon/youtube.svg' alt='YoutubeIcon'></img></a>
                 </div>
             </div>
             <div className='w-full' style={{height: '70%'}}>
@@ -208,7 +207,7 @@ export default function MusicStreamer(){
                 <div className='w-3/12 h-full float-left'>
                     <div className='w-full h-full flex justify-end items-center'>
                         <div className='w-fit h-fit absolute right-10 top-96'>
-                            <img className='w-8 h-8' src='./image/icon/brightness.svg'></img>
+                            <img className='w-8 h-8' src='./image/icon/brightness.svg' alt='BrightnessIcon'></img>
                         </div>
                         <div className='w-10 mr-20 mb-20'>
                             <input ref={refVolumeRange} type={'range'} onChange={handleBrightness} className='appearance-none rounded-xl p-0 h-1 bg-slate-100 -rotate-90' min={0} max={100} defaultValue={0}/>
@@ -221,11 +220,11 @@ export default function MusicStreamer(){
                     <div className='flex justify-center items-center w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'>
                         <div className='mx-auto w-fit'>
                             <div className='w-fit float-left mr-10'>
-                                <img className='w-8 h-8 mx-auto' src='./image/icon/rain.svg'></img>
+                                <img className='w-8 h-8 mx-auto' src='./image/icon/rain.svg' alt='RainIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleRainVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
                             <div className='w-fit float-left ml-5'>
-                            <img className='w-8 h-8 mx-auto' src='./image/icon/wave.svg'></img>
+                            <img className='w-8 h-8 mx-auto' src='./image/icon/wave.svg' alt='WaveIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleWaveVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
                         </div>
