@@ -5,11 +5,11 @@ MySimpleRadio is a simple music player that streams from Youtube. Whether you ar
 ## Preview - [Live Site](https://holimm.github.io/MySimpleRadio/)
 ![MySimpleRadio](https://user-images.githubusercontent.com/95845053/182164294-e8343544-dd41-421f-bcc4-e0a837528694.png)
 ## Features
-<li>6 Livestreaming channel and 20+ video split into 5 category</li>
+<li>6 livestreaming channels and 20+ videos split into 5 categories.</li>
 <li>Audio control</li>
-<li>Background brightness control</li>
+<li>Background brightness adjustment</li>
 <li>Background changer</li>
-<li>Rain and Wave ambient noise</li>
+<li>Rain and waves ambient noise</li>
 
 ## Tools
 <li><a href="https://reactjs.org/">ReactJS</a></li>
