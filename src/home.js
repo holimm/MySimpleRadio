@@ -47,7 +47,7 @@ export default function Home(){
                 <motion.div className='bg-transparent mx-auto mt-12 w-fit h-fit'
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
-                    transition={{duration: 4}}
+                    transition={{duration: 5}}
                 >
                     <Link to='/MySimpleRadio/MusicStreamer'>
                     <button className='px-20 py-5 text-lg bg-transparent hover:scale-110 border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out text-white rounded-full'>START LISTENING</button>

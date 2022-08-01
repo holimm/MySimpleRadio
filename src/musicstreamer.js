@@ -340,11 +340,12 @@ export default function MusicStreamer(){
                 animate={{opacity: 1}}
                 transition={{duration: 3, ease: 'easeInOut'}}
             >
-                <div className='w-1/3 h-full flex justify-start items-center'>
+                <div className='w-1/3 h-full flex justify-start items-center'>               
                     <Link to='/MySimpleRadio/'>
                         <button className='h-9 w-9 mx-5 ml-20 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/back.svg' alt='ReturnIcon'/></button> 
-                    </Link>
+                    </Link>                        
                     <h2 className='text-white text-3xl' style={{fontFamily: 'Barlow Condensed'}}>My Simple Radio</h2>
+                    <a href='https://github.com/holimm/MySimpleRadio' target={'_blank'} rel='noreferrer'><button className='h-9 w-9 mx-5 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/github.svg' alt='GitHubIcon'/></button></a>                
                 </div>
                 <div className='w-7/12 h-full flex justify-start items-center'>
                     <p className='text-white text-6xl truncate py-2' style={{fontFamily: 'Barlow Condensed'}}>{channel.channel}</p>
@@ -368,14 +369,14 @@ export default function MusicStreamer(){
                             return (
                             <motion.div whileHover={{scale:1.2}} whileTap={{scale: 0.8}} transition={{ease: 'easeInOut'}}>
                             <div onClick={()=>changeChannel(items)} className='my-4 cursor-pointer' style={{fontFamily: 'Barlow Condensed'}}>
-                                <div className='flex justify-start items-center ml-16 mr-8 transition ease-in-out'>
+                                <div className='flex justify-start items-center ml-16 mr-8'>
                                     <img className='h-4 w-4' src='image/icon/play.svg' alt='ReturnIcon'/>
                                     <p className='text-xl ml-5 text-white truncate'>{items.channel}</p>
                                 </div>
                             </div>
                             </motion.div>);
-                        })}
-                    </div>
+                        })}                     
+                    </div>          
                 </motion.div>
                 <motion.div className='w-6/12 h-full float-left'
                     initial={{scale: 0}}
