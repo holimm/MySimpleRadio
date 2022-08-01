@@ -322,10 +322,10 @@ export default function MusicStreamer(){
     
     return(
         <>       
-        <div className='h-full w-full overflow-hidden absolute top-0 scale-125'>
-          <ReactPlayer className='react-player' url={`//www.youtube.com/embed/${channel.urlPart}?autoplay=1&mute=0&start=0`} width={"100%"} height={"100vh"} controls={false} playing={play} loop={true} volume={volume} muted={mute}/>
+        <div className='h-full w-full overflow-hidden absolute top-0 scale-150'>
+          <ReactPlayer className='react-player' url={`//www.youtube.com/embed/${channel.urlPart}?autoplay=1&mute=0&start=0&controls=0&rel=0`}  config={{youtube: {playerVars: { showinfo: 0 }}}} width={"100%"} height={"100vh"} controls={false} playing={play} loop={true} volume={volume} muted={mute}/>
         </div>
-        <div ref={refBackground} className='h-full w-full overflow-hidden absolute top-0 scale-125 hidden'>
+        <div ref={refBackground} className='h-full w-full overflow-hidden absolute top-0 scale-150 hidden'>
           <ReactPlayer className='react-player' url={`//www.youtube.com/embed/${bgPlayer.url}?autoplay=1&mute=0&start=0`} width={"100%"} height={"100vh"} controls={false} playing={play} loop={true} muted={true}/>
         </div>
         <div className={`h-full w-full overflow-hidden absolute top-0 bg-black`} style={{opacity: brightness}}></div>
