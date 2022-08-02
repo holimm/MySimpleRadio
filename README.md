@@ -4,7 +4,7 @@
 MySimpleRadio is a simple music player that streams from Youtube. Whether you are studying, playing games, or just relaxing. MySimpleRadio will deliver the best experience and make sure that you can focus on whatever you are doing.
 ## Preview - [Live Site](https://holimm.github.io/MySimpleRadio/)
 ![MySimpleRadio2](https://user-images.githubusercontent.com/95845053/182170929-4af8e167-3997-4f16-aa1f-e9dd03304728.png)
-![MySimpleRadio](https://user-images.githubusercontent.com/95845053/182164294-e8343544-dd41-421f-bcc4-e0a837528694.png)
+![MySimpleRadio2](https://user-images.githubusercontent.com/95845053/182340613-0253e5cf-43e5-403f-8cd0-3743791b18e9.png)
 ## 🔑 Features
 <li>6 livestreaming channels and 20+ videos split into 5 categories.</li>
 <li>Audio control.</li>
