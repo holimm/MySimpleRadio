@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MySimpleRadio/static/css/main.81914399.css",
-    "main.js": "/MySimpleRadio/static/js/main.65474b29.js",
+    "main.css": "/MySimpleRadio/static/css/main.e0e39776.css",
+    "main.js": "/MySimpleRadio/static/js/main.2bea1a6e.js",
     "index.html": "/MySimpleRadio/index.html",
-    "main.81914399.css.map": "/MySimpleRadio/static/css/main.81914399.css.map",
-    "main.65474b29.js.map": "/MySimpleRadio/static/js/main.65474b29.js.map"
+    "main.e0e39776.css.map": "/MySimpleRadio/static/css/main.e0e39776.css.map",
+    "main.2bea1a6e.js.map": "/MySimpleRadio/static/js/main.2bea1a6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.81914399.css",
-    "static/js/main.65474b29.js"
+    "static/css/main.e0e39776.css",
+    "static/js/main.2bea1a6e.js"
   ]
 }
