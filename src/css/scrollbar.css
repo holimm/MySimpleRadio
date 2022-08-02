@@ -18,12 +18,6 @@
     background: rgb(219, 219, 219); 
   }
 
-  @media (min-width: 1024px) {
-    .h-custom {
-        height: 70%;
-    }
-}
-
 @media (max-width: 768px) {
   .scale-custom {
       --tw-scale-x: 3;

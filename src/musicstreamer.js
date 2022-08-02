@@ -352,7 +352,7 @@ export default function MusicStreamer(){
                     <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='image/icon/youtube.svg' alt='YoutubeIcon'></img></a>
                 </div>
             </motion.div>
-            <div className='w-full h-3/5 h-custom'>
+            <div className='w-full' style={{height: '70%'}}>
                 <motion.div className='w-5/12 lg:w-3/12 h-full float-left'
                     initial={{x:-450}}
                     animate={{x:0}}
