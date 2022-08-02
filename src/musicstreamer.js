@@ -421,7 +421,7 @@ export default function MusicStreamer(){
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div className='flex justify-between items-center px-5 py-3 mx-auto w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'
+                    <motion.div className='flex justify-between items-center px-5 py-3 mx-auto w-fit h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'
                     initial={{y: 150}}
                     animate={{y: 0}}
                     transition={{duration: 1.6, ease: 'easeInOut'}}
