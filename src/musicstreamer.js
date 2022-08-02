@@ -322,7 +322,7 @@ export default function MusicStreamer(){
     
     return(
         <>       
-        <div className='h-full w-full overflow-hidden absolute top-0 scale-150'>
+        <div className='h-full w-full overflow-hidden absolute top-0 scale-custom scale-custom2 scale-150'>
           <ReactPlayer className='react-player' url={`//www.youtube.com/embed/${channel.urlPart}?autoplay=1&mute=0&start=0&controls=0&rel=0`}  config={{youtube: {playerVars: { showinfo: 0 }}}} width={"100%"} height={"100vh"} controls={false} playing={play} loop={true} volume={volume} muted={mute}/>
         </div>
         <div ref={refBackground} className='h-full w-full overflow-hidden absolute top-0 scale-150 hidden'>
@@ -340,20 +340,20 @@ export default function MusicStreamer(){
                 animate={{opacity: 1}}
                 transition={{duration: 3, ease: 'easeInOut'}}
             >
-                <div className='w-1/3 h-full flex justify-start items-center'>               
+                <div className='w-6/12 lg:w-1/3 h-full flex justify-start items-center'>               
                     <Link to='/MySimpleRadio/'>
-                        <button className='h-9 w-9 mx-5 ml-20 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/back.svg' alt='ReturnIcon'/></button> 
+                        <button className='h-9 w-9 mx-5 ml-0 lg:ml-20 bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/back.svg' alt='ReturnIcon'/></button> 
                     </Link>                        
-                    <h2 className='text-white text-3xl' style={{fontFamily: 'Barlow Condensed'}}>My Simple Radio</h2>
+                    <h2 className='text-white text-xl lg:text-3xl' style={{fontFamily: 'Barlow Condensed'}}>My Simple Radio</h2>
                     <a href='https://github.com/holimm/MySimpleRadio' target={'_blank'} rel='noreferrer'><button className='h-9 w-9 mx-5 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-6 w-6 mx-auto' src='image/icon/github.svg' alt='GitHubIcon'/></button></a>                
                 </div>
-                <div className='w-7/12 h-full flex justify-start items-center'>
-                    <p className='text-white text-6xl truncate py-2' style={{fontFamily: 'Barlow Condensed'}}>{channel.channel}</p>
+                <div className='w-6/12 lg:w-7/12 h-full flex justify-start items-center'>
+                    <p className='text-white text-2xl lg:text-6xl truncate py-2' style={{fontFamily: 'Barlow Condensed'}}>{channel.channel}</p>
                     <a href={`${channel.url}`} target={'_blank'} rel='noreferrer'><img className='w-10 h-10 ml-4 mt-2 hover:scale-110 cursor-pointer' src='image/icon/youtube.svg' alt='YoutubeIcon'></img></a>
                 </div>
             </motion.div>
-            <div className='w-full' style={{height: '70%'}}>
-                <motion.div className='w-3/12 h-full float-left'
+            <div className='w-full h-3/5 h-custom'>
+                <motion.div className='w-5/12 lg:w-3/12 h-full float-left'
                     initial={{x:-450}}
                     animate={{x:0}}
                     transition={{duration: 1.6, ease: 'easeInOut'}}
@@ -364,12 +364,12 @@ export default function MusicStreamer(){
                             <input type={'range'} onChange={handleGenreChange} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={4} defaultValue={0}/>
                         </div>                         
                     </div>  
-                    <div className='w-full h-4/6 mt-3 float-right overflow-w-0 overflow-x-hidden'>
+                    <div className='w-full h-3/4 mt-3 float-right overflow-w-0 overflow-x-hidden'>
                         {listRadio.filter(condition=>{return condition.type === genre}).map(items=>{
                             return (
                             <motion.div whileHover={{scale:1.2}} whileTap={{scale: 0.8}} transition={{ease: 'easeInOut'}}>
                             <div onClick={()=>changeChannel(items)} className='my-4 cursor-pointer' style={{fontFamily: 'Barlow Condensed'}}>
-                                <div className='flex justify-start items-center ml-16 mr-8'>
+                                <div className='flex justify-start items-center ml-2 lg:ml-16 mr-8'>
                                     <img className='h-4 w-4' src='image/icon/play.svg' alt='ReturnIcon'/>
                                     <p className='text-xl ml-5 text-white truncate'>{items.channel}</p>
                                 </div>
@@ -378,13 +378,13 @@ export default function MusicStreamer(){
                         })}                     
                     </div>          
                 </motion.div>
-                <motion.div className='w-6/12 h-full float-left'
+                <motion.div className='w-4/12 lg:w-6/12 h-full float-left'
                     initial={{scale: 0}}
                     animate={{scale: 1}}
                     transition={{duration: 2, ease: 'easeInOut'}}
                 >
                     <div ref={refPause} className='w-fit h-fit mx-auto mt-32'>
-                        <div className='w-52 h-52 bg-cover bg-center rounded-3xl' style={{backgroundImage: `url('image/icon/pauseGIF.gif')`}}></div>
+                        <div className='w-32 h-32 lg:w-52 lg:h-52 bg-cover bg-center rounded-3xl' style={{backgroundImage: `url('image/icon/pauseGIF.gif')`}}></div>
                         <p className='text-4xl text-white text-center mt-5' style={{fontFamily: 'Barlow Condensed'}}>Paused</p>
                     </div>
                 </motion.div>
@@ -394,7 +394,7 @@ export default function MusicStreamer(){
                     transition={{duration: 1.7, ease: 'easeInOut'}}
                 >
                     <div className='w-full h-full flex justify-end items-center relative'>
-                        <div className='w-fit h-fit absolute right-10 bottom-44'>
+                        <div className='w-fit h-fit absolute right-10 bottom-32 lg:bottom-44'>
                             <img className='w-8 h-8' src='image/icon/brightness.svg' alt='BrightnessIcon'></img>
                         </div>
                         <div className='w-10 mr-20 mb-20'>
@@ -404,43 +404,43 @@ export default function MusicStreamer(){
                 </motion.div>
             </div>
             <div className='w-full h-full p-5 pb-10'>
-                <div className='w-fit h-fit mx-auto grid grid-cols-3 gap-16'>
+                <div className='w-full h-fit mx-auto grid grid-cols-3 gap-2 lg:gap-16'>
                     <motion.div className='flex justify-center items-center w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'
                         initial={{y: 150}}
                         animate={{y: 0}}
                         transition={{duration: 2, ease: 'easeInOut'}}
                     >
                         <div className='mx-auto w-fit'>
-                            <div className='w-fit float-left mr-10'>
+                            <div className='w-fit float-left lg:mr-10'>
                                 <img className='w-8 h-8 mx-auto' src='image/icon/rain.svg' alt='RainIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleRainVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
-                            <div className='w-fit float-left ml-5'>
+                            <div className='w-fit float-left lg:ml-5'>
                             <img className='w-8 h-8 mx-auto' src='image/icon/wave.svg' alt='WaveIcon'></img>
                                 <input ref={refVolumeRange} type={'range'} onChange={handleWaveVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div className='flex justify-between items-center px-5 py-3 bg-transparent mx-auto w-fit h-fit bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'
+                    <motion.div className='flex justify-between items-center px-5 py-3 mx-auto w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full'
                     initial={{y: 150}}
                     animate={{y: 0}}
                     transition={{duration: 1.6, ease: 'easeInOut'}}
                     >         
                         <motion.div whileHover={{scale:1.1}} whileTap={{scale: 0.8}} transition={{ease: 'easeInOut'}}>
-                        <button onClick={playMusic} className='h-20 w-20 mx-5 text-lg bg-transparent border-2 transition duration-300 ease-in-out text-white rounded-full'><img className='h-12 w-12 mx-auto' src={playIcon} alt='PlayIcon'/></button>  
+                        <button onClick={playMusic} className='h-16 w-16 lg:h-20 lg:w-20 mx-1 lg:mx-5 text-lg bg-transparent border-2 transition duration-300 ease-in-out text-white rounded-full'><img className='h-12 w-12 mx-auto' src={playIcon} alt='PlayIcon'/></button>  
                         </motion.div>
                         <motion.div whileHover={{scale:1.1}} whileTap={{scale: 0.8}} transition={{ease: 'easeInOut'}}>
-                        <button onClick={changeMute} className='h-20 w-20 mx-5 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-12 w-12 mx-auto' src={volumeIcon} alt='VolumeIcon'/></button>   
+                        <button onClick={changeMute} className='h-16 w-16 lg:h-20 lg:w-20 mx-1 lg:mx-5 text-lg bg-transparent border-2 hover:scale-110 transition duration-300 ease-in-out text-white rounded-full'><img className='h-12 w-12 mx-auto' src={volumeIcon} alt='VolumeIcon'/></button>   
                         </motion.div>
                         <input ref={refVolumeRange} type={'range'} onChange={handleChangeVolume} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={100} defaultValue={0}/>          
                     </motion.div>
-                    <motion.div className='flex justify-between items-center w-full h-full'
+                    <motion.div className='hidden lg:flex justify-between items-center w-full h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl rounded-full '
                         initial={{y: 150}}
                         animate={{y: 0}}
                         transition={{duration: 2, ease: 'easeInOut'}}
                     >                     
-                        <div className='flex justify-center items-center py-4 mx-5 w-3/4 h-full bg-slate-400 bg-opacity-30 backdrop-blur-xl text-white after:bg-rose-500 rounded-full appearance-none focus:ring-0 cursor-pointer'>
-                            <div className='w-fit float-left ml-5'>
+                        <div className='flex justify-center items-center py-4 mx-auto w-fit h-full text-white after:bg-rose-500 appearance-none focus:ring-0 cursor-pointer'>
+                            <div className='w-fit'>
                                 <p className='text-center text-white text-2xl' style={{fontFamily: 'Barlow Condensed'}}>{bgPlayer.label}</p>
                                 <input type={'range'} onChange={handleBackgroundChange} className='appearance-none rounded-xl p-0 h-1 bg-slate-100' min={0} max={4} defaultValue={0}/>
                             </div>                         

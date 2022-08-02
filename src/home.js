@@ -20,7 +20,7 @@ export default function Home(){
     }
     return(
         <>       
-        <div className='h-full w-full overflow-hidden absolute top-0 scale-125'>
+        <div className='h-full w-full overflow-hidden absolute top-0 scale-custom md:scale-125 lg:scale-150'>
           <ReactPlayer className='react-player' url={`${channel.url}`} width={"100%"} height={"100vh"} playing={true} loop={true} volume={volume} muted={mute}/>
         </div>
         <div className='h-full w-full overflow-hidden absolute top-0 scale-150 hidden'>
@@ -28,7 +28,7 @@ export default function Home(){
         </div>
         <div className='h-full w-full overflow-hidden absolute top-0 bg-black opacity-30'></div>
         <div className='h-screen w-screen bg-transparent overflow-hidden absolute top-0'>
-            <motion.div className='w-fit h-fit p-5 pb-10 mt-60 mx-auto border-2 border-transparent'
+            <motion.div className='w-fit h-fit p-5 pb-10 mt-40 lg:mt-60 mx-auto border-2 border-transparent'
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 2}}
@@ -38,9 +38,9 @@ export default function Home(){
                     animate={{opacity: 1, letterSpacing: '3px'}}
                     transition={{duration: 4}}
                 >
-                    <p className='text-7xl text-white text-center' style={{fontFamily: 'Barlow Condensed'}}>MY SIMPLE RADIO</p>
+                    <p className='text-5xl lg:text-7xl text-white text-center' style={{fontFamily: 'Barlow Condensed'}}>MY SIMPLE RADIO</p>
                     <motion.div whileTap={{scale: 1.6}} transition={{ease: 'easeInOut'}}>
-                        <img ref={refIcon} onClick={unMute} className='w-16 h-16 ml-5 cursor-pointer' src='image/headphone.svg' alt='HeadphoneIcon'></img>
+                        <img ref={refIcon} onClick={unMute} className='w-10 h-10 lg:w-16 lg:h-16 ml-5 cursor-pointer' src='image/headphone.svg' alt='HeadphoneIcon'></img>
                     </motion.div>
                 </motion.div>
                 {/* <p className='text-xl text-white text-center mt-2 mb-10' style={{fontFamily: 'Barlow Condensed'}}>AN ONLINE MUSIC APP</p> */}
