@@ -66,15 +66,16 @@ export default function MusicStreamer() {
     setBrightness(brightness);
   };
   const handleGenreChange = (e: any) => {
-    e.target.value === 0
+    let value = parseInt(e.target.value);
+    value === 0
       ? setGenre("Streaming")
-      : e.target.value === 1
+      : value === 1
       ? setGenre("Lofi")
-      : e.target.value === 2
+      : value === 2
       ? setGenre("Piano")
-      : e.target.value === 3
+      : value === 3
       ? setGenre("Electric Guitar")
-      : e.target.value === 4
+      : value === 4
       ? setGenre("Creator's Choice")
       : setGenre("Streaming");
   };

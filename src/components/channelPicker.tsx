@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import listRadio from "../radioList.json";
+import PlayIcon from "../image/icon/play.svg";
 
 const ChannelPicker = ({ ...others }) => {
   return (
@@ -46,11 +47,7 @@ const ChannelPicker = ({ ...others }) => {
                   style={{ fontFamily: "Barlow Condensed" }}
                 >
                   <div className="flex justify-start items-center ml-2 lg:ml-16 mr-8">
-                    <img
-                      className="h-4 w-4"
-                      src="image/icon/play.svg"
-                      alt="ReturnIcon"
-                    />
+                    <img className="h-4 w-4" src={PlayIcon} alt="ReturnIcon" />
                     <p className="text-xl ml-5 text-white truncate">
                       {items.channel}
                     </p>
