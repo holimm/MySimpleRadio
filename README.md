@@ -14,6 +14,7 @@ MySimpleRadio is a simple music player that streams from Youtube. Whether you ar
 
 ## 🔧 Tools
 <li><a href="https://reactjs.org/">ReactJS</a></li>
+<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
 <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
 <li><a href="https://www.framer.com/motion/">Framer Motion</a></li>
 <li><a href="https://developers.google.com/youtube/v3">Youtube API</a></li>
