@@ -1,13 +1,26 @@
 {
   "files": {
-    "main.css": "/MySimpleRadio/static/css/main.e0e39776.css",
-    "main.js": "/MySimpleRadio/static/js/main.2bea1a6e.js",
+    "main.css": "/MySimpleRadio/static/css/main.6622ebc3.css",
+    "main.js": "/MySimpleRadio/static/js/main.4867531b.js",
+    "static/media/pauseGIF.gif": "/MySimpleRadio/static/media/pauseGIF.e0627f156737c072ca43.gif",
+    "static/media/wave.svg": "/MySimpleRadio/static/media/wave.0d60a3c374ff7e86f5549c59d342c32b.svg",
+    "static/media/github.svg": "/MySimpleRadio/static/media/github.a90e600cb4bd84bb451034e5a053564e.svg",
+    "static/media/volumeon.svg": "/MySimpleRadio/static/media/volumeon.df7f79eadfd56f4984a009bc77bf4474.svg",
+    "static/media/brightness.svg": "/MySimpleRadio/static/media/brightness.0a790d2f229eda636b54ff57875e6e56.svg",
+    "static/media/volumeoff.svg": "/MySimpleRadio/static/media/volumeoff.799d749e2b9af34ed12fc925b3314a4b.svg",
+    "static/media/rain.svg": "/MySimpleRadio/static/media/rain.e5b22656ee860e618b828fe70a74b27c.svg",
     "index.html": "/MySimpleRadio/index.html",
-    "main.e0e39776.css.map": "/MySimpleRadio/static/css/main.e0e39776.css.map",
-    "main.2bea1a6e.js.map": "/MySimpleRadio/static/js/main.2bea1a6e.js.map"
+    "static/media/headphone.svg": "/MySimpleRadio/static/media/headphone.1828ec735bae22a2b6a90ebd6979ac4d.svg",
+    "static/media/youtube.svg": "/MySimpleRadio/static/media/youtube.981e980c4957b9900e64a2aee9935f52.svg",
+    "static/media/back.svg": "/MySimpleRadio/static/media/back.ea2f5b0dc8cdec6194cf9d75d1bb9488.svg",
+    "static/media/pause.svg": "/MySimpleRadio/static/media/pause.5da7e19ba199292b9f213aae3533ef0e.svg",
+    "static/media/image.svg": "/MySimpleRadio/static/media/image.2b0f770710908174ad740ec3c7fc3677.svg",
+    "static/media/play.svg": "/MySimpleRadio/static/media/play.b5efc0a5c34c34545c8476c2fda1d5c0.svg",
+    "main.6622ebc3.css.map": "/MySimpleRadio/static/css/main.6622ebc3.css.map",
+    "main.4867531b.js.map": "/MySimpleRadio/static/js/main.4867531b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0e39776.css",
-    "static/js/main.2bea1a6e.js"
+    "static/css/main.6622ebc3.css",
+    "static/js/main.4867531b.js"
   ]
 }
