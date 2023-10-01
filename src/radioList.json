@@ -12,6 +12,18 @@
     "type": "Streaming"
   },
   {
+    "channel": "Saturday vibes 🍀 Calm Your Mind ~ Lofi hip hop mix",
+    "urlPart": "KkTCySBWTv8",
+    "url": "https://www.youtube.com/watch?v=KkTCySBWTv8",
+    "type": "Streaming"
+  },
+  {
+    "channel": "Coffee Shop Radio ☕ - 24/7 lofi & jazzy hip-hop beats",
+    "urlPart": "lP26UCnoH9s",
+    "url": "https://www.youtube.com/watch?v=lP26UCnoH9s",
+    "type": "Streaming"
+  },
+  {
     "channel": "Chill With Taiki",
     "urlPart": "qH3fETPsqXU",
     "url": "https://www.youtube.com/watch?v=qH3fETPsqXU",
@@ -30,12 +42,6 @@
     "type": "Streaming"
   },
   {
-    "channel": "ABao - Jazz & Lofi",
-    "urlPart": "kgx4WGK0oNU",
-    "url": "https://www.youtube.com/watch?v=kgx4WGK0oNU",
-    "type": "Streaming"
-  },
-  {
     "channel": "Morning Coffee",
     "urlPart": "1fueZCTYkpA",
     "url": "https://www.youtube.com/watch?v=1fueZCTYkpA",
@@ -51,6 +57,12 @@
     "channel": "Your Smile / My Everything",
     "urlPart": "Hddty2eLglc",
     "url": "https://www.youtube.com/watch?v=Hddty2eLglc",
+    "type": "Lofi"
+  },
+  {
+    "channel": "Relax with my cat - beats to sleep/study x Fall In Luv",
+    "urlPart": "GrG2-oX5z24",
+    "url": "https://www.youtube.com/watch?v=GrG2-oX5z24",
     "type": "Lofi"
   },
   {
@@ -144,6 +156,18 @@
     "type": "Piano"
   },
   {
+    "channel": "Groove Funk Guitar Solo",
+    "urlPart": "uR8-jarPlNU",
+    "url": "https://www.youtube.com/watch?v=uR8-jarPlNU",
+    "type": "Electric Guitar"
+  },
+  {
+    "channel": "Smooth Jazz Guitar Jam",
+    "urlPart": "dN_HZlplA4Q",
+    "url": "https://www.youtube.com/watch?v=dN_HZlplA4Q",
+    "type": "Electric Guitar"
+  },
+  {
     "channel": "John Mayer - Slow Dancing In A Burning Room",
     "urlPart": "gJ2Kn2l_NGU",
     "url": "https://www.youtube.com/watch?v=gJ2Kn2l_NGU",
@@ -168,21 +192,27 @@
     "type": "Electric Guitar"
   },
   {
-    "channel": "Smooth Jazz Guitar Jam",
-    "urlPart": "dN_HZlplA4Q",
-    "url": "https://www.youtube.com/watch?v=dN_HZlplA4Q",
-    "type": "Electric Guitar"
-  },
-  {
-    "channel": "Joji - Glimpse of Us",
-    "urlPart": "FvOpPeKSf_4",
-    "url": "https://www.youtube.com/watch?v=FvOpPeKSf_4",
+    "channel": "V 'Love Me Again' Official MV",
+    "urlPart": "HYzyRHAHJl8",
+    "url": "https://www.youtube.com/watch?v=HYzyRHAHJl8",
     "type": "Creator's Choice"
   },
   {
-    "channel": "Joji - Run",
-    "urlPart": "K09_5IsgGe8",
-    "url": "https://www.youtube.com/watch?v=K09_5IsgGe8",
+    "channel": "V 'Slow Dancing' Official MV",
+    "urlPart": "eI0iTRS0Ha8",
+    "url": "https://www.youtube.com/watch?v=eI0iTRS0Ha8",
+    "type": "Creator's Choice"
+  },
+  {
+    "channel": "Jungkook - Still With You",
+    "urlPart": "BksBNbTIoPE",
+    "url": "https://www.youtube.com/watch?v=BksBNbTIoPE",
+    "type": "Creator's Choice"
+  },
+  {
+    "channel": "Bubbly - Ethan Low",
+    "urlPart": "53Rb6P-3o2E",
+    "url": "https://www.youtube.com/watch?v=53Rb6P-3o2E",
     "type": "Creator's Choice"
   },
   {
@@ -198,15 +228,21 @@
     "type": "Creator's Choice"
   },
   {
+    "channel": "Astrid S - It's Ok If You Forget Me (Official Lyric Video)",
+    "urlPart": "yYchF3OLkm4",
+    "url": "https://www.youtube.com/watch?v=geoJGyYchF3OLkm4wmRQ00",
+    "type": "Creator's Choice"
+  },
+  {
     "channel": "Gate Of Steiner",
     "urlPart": "7d0WMVU_tlo",
     "url": "https://www.youtube.com/watch?v=7d0WMVU_tlo",
     "type": "Creator's Choice"
   },
   {
-    "channel": "GREY D x tlinh - vaicaunoicokhiennguoithaydoi",
-    "urlPart": "2iidlwQ-NfU",
-    "url": "https://www.youtube.com/watch?v=2iidlwQ-NfU",
+    "channel": "NẾU EM KHÔNG CẦN - ĐẠT DOPE",
+    "urlPart": "geoJGwmRQ00",
+    "url": "https://www.youtube.com/watch?v=geoJGwmRQ00",
     "type": "Creator's Choice"
   }
 ]

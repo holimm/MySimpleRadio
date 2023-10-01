@@ -1,16 +1,16 @@
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import headPhoneIcon from "./image/headphone.svg";
+import NatureSound from "./components/natureSound";
 
 export default function Home() {
+  const navigate = useNavigate();
   const refIcon = useRef(null);
   const [mute, setMute] = useState<boolean>(true);
   const [volume, setVolume] = useState<number>(0.5);
-  const [channel] = useState<{ url: String }>({
-    url: "//www.youtube.com/embed/2fCoOx9W4NQ?autoplay=1&mute=0&start=1",
-  });
+  const [tabTransition, setTabTransition] = useState<boolean>(false);
   const unMute = () => {
     if (mute) {
       setMute(false);
@@ -19,12 +19,26 @@ export default function Home() {
       setVolume(0);
     }
   };
+  const openHomepageTab = () => {
+    setTabTransition(true);
+    setTimeout(() => {
+      navigate("/MySimpleRadio/MusicStreamer");
+    }, 1200);
+  };
   return (
     <>
-      <div className="h-full w-full overflow-hidden absolute top-0 scale-custom md:scale-125 lg:scale-150">
+      {tabTransition && (
+        <motion.div
+          className="h-screen w-screen bg-black absolute z-50"
+          initial={{ y: "-100vh" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        ></motion.div>
+      )}
+      <div className="h-full w-full overflow-hidden absolute top-0 scale-[6] md:scale-[2] lg:scale-150">
         <ReactPlayer
           className="react-player"
-          url={`${channel.url}`}
+          url={`//www.youtube.com/embed/2fCoOx9W4NQ?autoplay=1&mute=0&start=1`}
           width={"100%"}
           height={"100vh"}
           playing={true}
@@ -33,18 +47,7 @@ export default function Home() {
           muted={mute}
         />
       </div>
-      <div className="h-full w-full overflow-hidden absolute top-0 scale-150 hidden">
-        <ReactPlayer
-          className="react-player"
-          url={`//www.youtube.com/embed/q76bMs-NwRk?autoplay=1&mute=0&start=0`}
-          width={"100%"}
-          height={"100vh"}
-          playing={true}
-          loop={true}
-          volume={0.4}
-          muted={mute}
-        />
-      </div>
+      <NatureSound volume={0.4} mute={mute} play={true} url="Q48Fry14PDM" />
       <div className="h-full w-full overflow-hidden absolute top-0 bg-black opacity-30"></div>
       <div className="h-screen w-screen bg-transparent overflow-hidden absolute top-0">
         <motion.div
@@ -85,11 +88,12 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 5 }}
             >
-              <Link to="/MySimpleRadio/MusicStreamer">
-                <button className="px-20 py-5 text-lg bg-transparent hover:scale-110 border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out text-white rounded-full">
-                  START LISTENING
-                </button>
-              </Link>
+              <button
+                onClick={openHomepageTab}
+                className="px-20 py-5 text-lg bg-transparent hover:scale-110 border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out text-white rounded-full"
+              >
+                START LISTENING
+              </button>
             </motion.div>
           </div>
         </motion.div>

@@ -8,9 +8,19 @@ import ChannelPicker from "./components/channelPicker";
 import PausedScreen from "./components/pausedScreen";
 import BrightnessChanger from "./components/brightnessChanger";
 import NatureSound from "./components/natureSound";
-import BackgroundVideo from "./components/backgroundVideo";
-import BottomControls from "./components/bottomControls";
+import {
+  BackgroundVideo,
+  BackgroundControlsMobile,
+} from "./components/backgroundVideo";
+import {
+  BottomControls,
+  BottomControlsMobile,
+} from "./components/bottomControls";
 import { BackgroundPlayerModel, ChannelModel } from "./models/mainModel";
+import useWindowDimensions from "./hooks/useDimensions";
+import RainIcon from "./image/icon/rain.svg";
+import WaveIcon from "./image/icon/wave.svg";
+import ImageIcon from "./image/icon/image.svg";
 
 export default function MusicStreamer() {
   const [mute, setMute] = useState<boolean>(true);
@@ -27,14 +37,14 @@ export default function MusicStreamer() {
     url: "",
   });
   const [particles] = useState<any>(<Particle />);
-
   const [channel, setChannel] = useState<ChannelModel>({
     channel: "Lofi Girl - Relax/Study",
     urlPart: "jfKfPfyJRdk",
     url: "https://www.youtube.com/watch?v=jfKfPfyJRdk",
     type: "Streaming",
   });
-
+  const { width } = useWindowDimensions();
+  console.log("Width: ", window.screen.width, "Height: ", window.screen.height);
   const changeMute = () => {
     setMute(!mute);
   };
@@ -86,19 +96,19 @@ export default function MusicStreamer() {
         break;
       }
       case "1": {
-        setBGPlayer({ label: "Summer Tram", url: "KextmYQmxH0" });
+        setBGPlayer({ label: "Autumn", url: "2wIACHP04qQ" });
         break;
       }
       case "2": {
-        setBGPlayer({ label: "Rain", url: "kDCXBwzSI-4" });
+        setBGPlayer({ label: "Summer Tram", url: "KextmYQmxH0" });
         break;
       }
       case "3": {
-        setBGPlayer({ label: "Living Room", url: "WPvY5sp17kQ" });
+        setBGPlayer({ label: "Rain", url: "kDCXBwzSI-4" });
         break;
       }
       case "4": {
-        setBGPlayer({ label: "Noelle", url: "uFEzJ7udA98" });
+        setBGPlayer({ label: "Living Room", url: "zJOQRLJyQYA" });
         break;
       }
     }
@@ -109,6 +119,15 @@ export default function MusicStreamer() {
 
   return (
     <>
+      <motion.div
+        className="h-screen w-screen bg-black absolute z-50"
+        initial={{ y: 0 }}
+        animate={{ y: "100vh", transitionEnd: { display: "none" } }}
+        transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+      ></motion.div>
+      {width < 768 && (
+        <div className="h-[50vh] w-screen bg-black absolute bottom-0 z-20"></div>
+      )}
       <NatureSound
         volume={volumeRain}
         mute={mute}
@@ -121,8 +140,11 @@ export default function MusicStreamer() {
         play={playWave}
         url="nZfnoaHqFZw"
       />
-      <div className="h-full w-full overflow-hidden absolute top-0 scale-custom scale-custom2 scale-150">
+      <div className="h-full w-full overflow-hidden absolute top-0 z-10 md:scale-[1.8] scale-[1.4]">
         <VideoPlayer
+          className={"react-player"}
+          height={width < 768 ? "50vh" : "100vh"}
+          width={"100%"}
           playing={play}
           volume={volume}
           muted={mute}
@@ -130,15 +152,22 @@ export default function MusicStreamer() {
         />
       </div>
 
-      <BackgroundVideo play={play} backgroundURL={bgPlayer.url} />
+      <BackgroundVideo
+        height={width < 768 ? "50vh" : "100vh"}
+        width={"100%"}
+        play={play}
+        backgroundURL={bgPlayer.url}
+        screen
+      />
 
       <div
-        className={`h-full w-full overflow-hidden absolute top-0 bg-black`}
+        className={`h-full w-full overflow-hidden absolute top-0 z-10 bg-black`}
         style={{ opacity: brightness }}
       ></div>
 
       {!play && (
         <motion.div
+          className="absolute top-0 z-30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -146,18 +175,40 @@ export default function MusicStreamer() {
           {particles}
         </motion.div>
       )}
-      <div className="h-screen w-screen bg-transparent overflow-hidden absolute top-0">
+      <div className="h-screen w-screen bg-transparent overflow-hidden absolute top-0 z-30">
         <TopNavigation channel={channel.channel} url={channel.url} />
-        <div className="w-full" style={{ height: "70%" }}>
+        <div className="h-[27vh] w-full block md:hidden"></div>
+        <div className="h-[29vh] w-full md:h-[70%]">
           <ChannelPicker
             genre={genre}
             handleGenreChange={handleGenreChange}
             changeChannel={changeChannel}
           />
           {!play && <PausedScreen />}
-          <BrightnessChanger handleBrightness={handleBrightness} />
+          <motion.div
+            className="w-3/12 h-full float-right"
+            initial={{ x: 150 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1.7, delay: 0.8, ease: "easeInOut" }}
+          >
+            <div className="w-full h-full md:flex justify-end items-center relative">
+              <BrightnessChanger handleBrightness={handleBrightness} />
+              <BottomControlsMobile
+                handleVolume={handleRainVolume}
+                icon={RainIcon}
+              />
+              <BottomControlsMobile
+                handleVolume={handleWaveVolume}
+                icon={WaveIcon}
+              />
+              <BackgroundControlsMobile
+                handleVolume={handleBackgroundChange}
+                icon={ImageIcon}
+              />
+            </div>
+          </motion.div>
         </div>
-        <div className="w-full h-full p-5 pb-10">
+        <div className="w-full h-full p-5 pb-10 mt-8 md:mt-0">
           <BottomControls
             handleChangeVolume={handleChangeVolume}
             handleRainVolume={handleRainVolume}
@@ -168,6 +219,7 @@ export default function MusicStreamer() {
             play={play}
             mute={mute}
             backgroundLabel={bgPlayer.label}
+            screenWidth={width}
           />
         </div>
       </div>

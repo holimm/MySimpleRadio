@@ -5,10 +5,10 @@ import PlayIcon from "../image/icon/play.svg";
 const ChannelPicker = ({ ...others }) => {
   return (
     <motion.div
-      className="w-5/12 lg:w-3/12 h-full float-left"
+      className="w-7/12 md:w-5/12 lg:w-3/12 h-full float-left"
       initial={{ x: -450 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.6, ease: "easeInOut" }}
+      transition={{ duration: 1.6, delay: 0.8, ease: "easeInOut" }}
     >
       <div className="flex justify-center items-center py-2 w-fit mx-auto h-20 text-white after:bg-rose-500 rounded-full appearance-none focus:ring-0 cursor-pointer">
         <div className="w-fit float-left ml-5">
@@ -28,7 +28,7 @@ const ChannelPicker = ({ ...others }) => {
           />
         </div>
       </div>
-      <div className="w-full h-3/4 mt-3 float-right overflow-w-0 overflow-x-hidden">
+      <div className="w-full h-3/4 mt-0 md:mt-3 float-right overflow-w-0 overflow-x-hidden">
         {listRadio
           .filter((condition: any) => {
             return condition.type === others.genre;

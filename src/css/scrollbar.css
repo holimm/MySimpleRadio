@@ -1,37 +1,19 @@
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #ffffff; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(219, 219, 219); 
-  }
-
-@media (max-width: 768px) {
-  .scale-custom {
-      --tw-scale-x: 3;
-      --tw-scale-y: 3;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
+  width: 2px;
 }
-@media (min-width: 768px) {
-  @media (max-width: 1024){
-  .scale-custom2 {
-      --tw-scale-x: 2;
-      --tw-scale-y: 2;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  
-    }
-  }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(219, 219, 219);
 }

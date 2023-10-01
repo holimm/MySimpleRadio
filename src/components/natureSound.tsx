@@ -4,7 +4,7 @@ const NatureSound = ({ ...others }) => {
   return (
     <>
       <ReactPlayer
-        className="react-player"
+        className="react-player !opacity-0"
         url={`//www.youtube.com/embed/${others.url}?autoplay=1&mute=0&start=0`}
         width={"100%"}
         height={"100vh"}
